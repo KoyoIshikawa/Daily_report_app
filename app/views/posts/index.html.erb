@@ -1,6 +1,7 @@
 <h1>Hello World!!!</h1>
 <h1>投稿一覧</h1>
 <% @posts.each.with_index(1) do |post, i| %>
+    <p><%= l post.created_at, format: :date %></p>
     <p><%= post.title %></p>
     <p><%= post.content %></p>
     <%= link_to "詳細", post %>
