@@ -1,19 +1,16 @@
 <h1>Hello World!!!</h1>
 <h1>投稿一覧</h1>
 <% @posts.each.with_index(1) do |post, i| %>
-    <p><%= l post.created_at, format: :date %></p>
-    <p><%= post.title %></p>
-    <p><%= post.content %></p>
-    <%= link_to "詳細", post %>
-    <%= link_to "編集", edit_post_path(post) %>
-    <%= link_to "削除", post, method: :delete, data: { confirm: "削除しますか?" } %>
+    <div class="card border-dark mb-3" style="max-width: 30rem;">
+        <div class="card-header">
+            <%= l post.created_at, format: :date %>
+        </div>
+        <div class="card-body text-dark">
+            <h5 class="card-title"><%= post.title %></h5>
+            <p class="card-text"><%= post.content %></p>
+        </div>
+        <%= link_to "詳細", post %>
+        <%= link_to "編集", edit_post_path(post) %>
+        <%= link_to "削除", post, method: :delete, data: { confirm: "削除しますか?" } %>
+    </div>
 <% end %>
-<div class="card border-primary mb-3" style="max-width: 18rem;">
-  <div class="card-body border-primary">
-    <h5 class="card-title">Card title</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
-  </div>
-</div>
