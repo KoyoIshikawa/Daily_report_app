@@ -2,3 +2,9 @@
 <h2>参照画面</h2>
 <p>タイトル：<%= @post.title %></p>
 <p>詳細：<%= @post.content %></p>
+<div>
+  <% renderer = Redcarpet::Render::HTML %>
+  <% extensions = { tables: true } %>
+  <% markdown = Redcarpet::Markdown.new(renderer, extensions) %>
+  <%= markdown.render(@post.content).html_safe %>
+</div>
