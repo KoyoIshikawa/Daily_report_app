@@ -8,6 +8,11 @@ module MarkdownHelper
 
   def html_renderer
     Redcarpet::Render::HTML
+    ::Coderayify.new(
+      filter_html: true,
+      hard_wrap: true,
+      link_attributes: { rel: 'nofollow', target: "_blank" }
+    )
   end
 
   def markdown_extensions
