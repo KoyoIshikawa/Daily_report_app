@@ -1,12 +1,12 @@
 <%= render "layouts/error_messages" %>
 <%= form_with model: @post, local: true do |form| %>
   <div>
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <p><%= form.label :title %></p>
+    <p><%= form.text_field :title %></p>
   </div>
   <div>
-    <%= form.label :content %>
-    <%= form.text_field :content, size: "100px" %>
+    <p><%= form.label :content %></p>
+    <p><%= form.text_area :content, size: "100px" %></p>
   </div>
   <div>
     <%= form.submit button_value %>

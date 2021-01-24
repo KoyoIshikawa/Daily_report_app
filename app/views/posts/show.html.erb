@@ -1,4 +1,9 @@
+
+<div class="content">
 <%= render "date" %>
-<h2>参照画面</h2>
-<p>タイトル：<%= @post.title %></p>
-<p>詳細：<%= @post.content %></p>
+  <div>
+  <h3 class="title"><%= @post.title %></h3>
+  <div class=>
+    <%= markdown(@post.content) %>
+  </div>
+</div>

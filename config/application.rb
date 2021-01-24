@@ -26,7 +26,7 @@ module DailyReportApp
     config.time_zone = 'Asia/Tokyo'
     config.i18n.default_locale = :ja
     # Configuration for the application, engines, and railties goes here.
-    #
+    config.autoload_paths << Rails.root.join("lib/autoloads")
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
     #

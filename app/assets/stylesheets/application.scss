@@ -1,18 +1,4 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+
  @import "bootstrap/scss/bootstrap";
 
  $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
@@ -24,4 +10,21 @@ div.field_with_errors {
   input {
     border: 2px solid red;
   }
+}
+.header{
+  text-align: center;
+}
+pre{
+  border: 2px dashed rgb(213, 213, 244);
+  background-color: rgb(236, 236, 250);
+}
+.content{
+  max-width: 1000px;
+  margin: 0px auto;
+}
+.title{
+  border-bottom: 2px solid rgb(198, 191, 191);
+}
+code{
+  background-color: rgb(245, 210, 216);
 }
