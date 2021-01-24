@@ -12,9 +12,9 @@
                   <h5 class="card-title"><%= post.title %></h5>
                   <p class="card-text"><%= post.content %></p>
               
-              <%= link_to "詳細", post %>
-              <%= link_to "編集", edit_post_path(post) %>
-              <%= link_to "削除", post, method: :delete, data: { confirm: "削除しますか?" } %>
+              <%= link_to "詳細", post, class: "btn btn-secondary" %>
+              <%= link_to "編集", edit_post_path(post), class: "btn btn-secondary" %>
+              <%= link_to "削除", post, method: :delete, data: { confirm: "削除しますか?" }, class: "btn btn-secondary" %>
               </div>
           </div>
         </div>
