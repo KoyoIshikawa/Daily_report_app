@@ -3,8 +3,5 @@
 <p>タイトル：<%= @post.title %></p>
 <p>詳細：<%= @post.content %></p>
 <div>
-  <% renderer = Redcarpet::Render::HTML %>
-  <% extensions = { tables: true } %>
-  <% markdown = Redcarpet::Markdown.new(renderer, extensions) %>
-  <%= markdown.render(@post.content).html_safe %>
+  <%= markdown(@post.content) %>
 </div>
